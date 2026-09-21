@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回马枪粤语 - 经典粤剧影视与粤语发音教学资源</title>
+    <meta name="description" content="本站提供“回马枪”粤语读音教学、粤剧经典剧目推荐及粤语影视资源整理，帮助粤语学习者掌握这一常用成语的发音与使用场景。">
+    <meta name="keywords" content="回马枪粤语, 粤语发音, 粤剧, 粤语教学, 粤语影视">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #c62828;
+            --accent-color: #ffccbc;
+            --text-dark: #212121;
+            --text-gray: #666666;
+            --bg-light: #f5f5f5;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-btn {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Pronunciation Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .pronunciation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .pinyin-box {
+            background-color: #fff3e0;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+
+        .meaning {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Dictionary Section */
+        .dict-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .dict-sidebar h3 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+        }
+
+        .dict-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dict-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .dict-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .dict-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-top: 60px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 160px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .play-icon {
+            font-size: 3rem;
+            opacity: 0.8;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-info span {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 60px auto;
+        }
+
+        details {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+            border-top: 1px solid #f0f0f0;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .dict-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span>粤语学习库</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#pronunciation">发音指南</a></li>
+                    <li><a href="#usage">用法解析</a></li>
+                    <li><a href="#resources">影视资源</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索粤语</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>回马枪粤语</h1>
+        <p>从经典粤剧到现代影视，深入解析“回马枪”一词的粤语发音、历史典故及实际应用场景。</p>
+        <a href="#pronunciation" class="cta-btn">开始学习发音</a>
+    </section>
+
+    <main class="container">
+        
+        <!-- Pronunciation Section -->
+        <section id="pronunciation">
+            <div class="section-title">
+                <h2>粤语发音指南</h2>
+                <p>掌握地道粤语读音，告别普通话发音误区</p>
+            </div>
+
+            <div class="pronunciation-grid">
+                <article class="card">
+                    <div class="card-icon">🔊</div>
+                    <h3>标准读音</h3>
+                    <div class="pinyin-box">
+                        wui5 maa5 coeng1
+                    </div>
+                    <p class="meaning">
+                        回 (wui5) - 第五声<br>
+                        马 (maa5) - 第五声<br>
+                        枪 (coeng1) - 第一声
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>粤语拼音 (Jyutping)</h3>
+                    <div class="pinyin-box">
+                        wui5 maa5 coeng1
+                    </div>
+                    <p class="meaning">
+                        <strong>读音提示：</strong><br>
+                        “回”字不读 huí，而是读 wui5（类似“威”的短促音）。<br>
+                        “枪”字读 coeng1，而不是 chong1。
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>发音技巧</h3>
+                    <p class="meaning">
+                        “回马枪”是一个成语，形容战斗中假装撤退，实则回头反击的战术。在粤语中，重音通常落在“马”字上，发音短促有力。
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Usage & Dictionary Section -->
+        <section id="usage">
+            <div class="dict-layout">
+                <aside class="dict-sidebar">
+                    <h3>相关词汇</h3>
+                    <ul class="dict-list">
+                        <li><a href="#">马后炮</a></li>
+                        <li><a href="#">反戈一击</a></li>
+                        <li><a href="#">杀回马枪</a></li>
+                        <li><a href="#">回头是岸</a></li>
+                        <li><a href="#">调虎离山</a></li>
+                    </ul>
+                </aside>
+                <div class="dict-content">
+                    <h3>成语释义</h3>
+                    <p><strong>回马枪</strong>（粤语：wui5 maa5 coeng1）是中国传统武术及军事术语，后演变为成语。原意指在战斗中，骑马的人假装向后撤退，待敌人追击至近前时，突然调转马头，用长枪向后刺杀。</p>
+                    <h3>在现代语境中的应用</h3>
+                    <p>如今，该词常用于形容在局势逆转、谈判僵局或竞争激烈的环境中，突然采取的反击行动。例如：“他在谈判中使了一招回马枪，对方猝不及防，最终同意了我们的条件。”</p>
+                    <h3>粤剧与影视中的体现</h3>
+                    <p>在粤语影视及粤剧中，此词常被用来描述武打场面中的精彩桥段。由于粤语影视文化的传播，该词已成为粤语圈非常通用的词汇，即便非武术背景的观众也能理解其含义。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Resources Section -->
+        <section id="resources" class="video-section">
+            <div class="section-title">
+                <h2>粤语影视与教学资源</h2>
+                <p>通过视听学习，巩固“回马枪”的发音与用法</p>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>粤语常用成语：回马枪发音教学</h4>
+                        <span>教学视频 · 03:45</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>经典港片台词赏析：出其不意的反击</h4>
+                        <span>影视片段 · 05:20</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>粤语历史典故：从冷兵器到商业竞争</h4>
+                        <span>文化解说 · 08:15</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>如何用粤语表达“出其不意”</h4>
+                        <span>实用口语 · 02:50</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-container">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            
+            <details>
+                <summary>“回马枪”的粤语读音和普通话一样吗？</summary>
+                <div class="faq-content">
+                    不一样。“回”在普通话读 huí，在粤语读 wui5（第五声）；“枪”在普通话读 qiāng，在粤语读 coeng1（第一声）。因此，粤语读音 wui5 maa5 coeng1 与普通话 huí mǎ qiāng 存在较大差异。
+                </div>
+            </details>
+
+            <details>
+                <summary>这个成语在粤语地区很常用吗？</summary>
+                <div class="faq-content">
+                    是的，这是一个非常常用的成语。不仅用于形容军事或武术动作，在商业、体育、职场谈判等非战斗场合也被广泛使用。
+                </div>
+            </details>
+
+            <details>
+                <summary>除了“回马枪”，还有类似的粤语成语吗？</summary>
+                <div class="faq-content">
+                    有很多，例如“杀回马枪”（形容再次反击）、“反戈一击”（从内部进行攻击）以及“调虎离山”（计谋类）等。
+                </div>
+            </details>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    本站专注于粤语文化推广，提供精准的发音指南、丰富的影视资源及实用的语言学习资料。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#pronunciation">发音教学</a></li>
+                    <li><a href="#usage">用法解析</a></li>
+                    <li><a href="#resources">粤语影视</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>学习资源</h4>
+                <ul>
+                    <li><a href="#">粤语拼音表</a></li>
+                    <li><a href="#">常用俗语大全</a></li>
+                    <li><a href="#">粤语歌曲推荐</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 粤语学习库 - 专注粤语发音与文化传承
+        </div>
+    </footer>
+
+</body>
+</html>
