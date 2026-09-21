@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长度-国际标准单位换算与物理量测指南</title>
+    <meta name="description" content="本站提供国际标准长度单位（米、千米、厘米、毫米）的详细换算表、测量工具及在工程、物理、日常生活中的应用指南。">
+    <meta name="keywords" content="长度,长度换算,单位换算,米,千米,厘米,毫米,物理量测,工程单位">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #f0f4f8;
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        /* Table Styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fcfcfc;
+        }
+
+        /* Converter Tool */
+        .converter-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .result-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* List Styles */
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 0.8rem;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #e3f2fd;
+            color: var(--accent-color);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>📏</span> 长度百科
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#conversion" class="active">单位换算</a></li>
+                <li><a href="#standards">标准体系</a></li>
+                <li><a href="#applications">应用场景</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+    <section class="hero">
+        <h1>长度单位换算与测量指南</h1>
+        <p>从日常生活中的米尺到科学界的埃米，全面解析长度单位的定义、换算及应用。</p>
+    </section>
+
+    <div class="content-grid">
+        <!-- Left Column -->
+        <div class="main-column">
+            <section id="standards">
+                <h2>国际标准长度单位</h2>
+                <p>国际单位制（SI）中，长度的基本单位是米。根据国际计量大会（CGPM）的定义，米等于光在真空中在 1/299792458 秒时间间隔内所经路径的长度。为了适应不同的测量需求，我们通常使用米、分米、厘米、毫米、千米等衍生单位。</p>
+                
+                <h3>常用长度单位层级</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>单位名称</th>
+                                <th>符号</th>
+                                <th>进率关系</th>
+                                <th>适用场景</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>千米</td>
+                                <td>km</td>
+                                <td>1 km = 1000 m</td>
+                                <td>地理距离、道路里程</td>
+                            </tr>
+                            <tr>
+                                <td>米</td>
+                                <td>m</td>
+                                <td>1 m = 10 dm</td>
+                                <td>通用测量、身高、房屋尺寸</td>
+                            </tr>
+                            <tr>
+                                <td>分米</td>
+                                <td>dm</td>
+                                <td>1 dm = 10 cm</td>
+                                <td>家具测量、体育器材</td>
+                            </tr>
+                            <tr>
+                                <td>厘米</td>
+                                <td>cm</td>
+                                <td>1 cm = 10 mm</td>
+                                <td>服装尺码、纸张规格</td>
+                            </tr>
+                            <tr>
+                                <td>毫米</td>
+                                <td>mm</td>
+                                <td>1 mm = 0.001 m</td>
+                                <td>机械加工、精密电子</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="conversion">
+                <h2>实用长度换算工具</h2>
+                <p>在进行工程图纸标注或跨国贸易时，经常需要在不同单位之间进行快速转换。以下是基于国际标准的换算逻辑：</p>
+                
+                <h3>换算公式示例</h3>
+                <ul class="info-list">
+                    <li><strong>米转厘米：</strong> 乘以 100 (例如：2.5 m = 250 cm)</li>
+                    <li><strong>厘米转毫米：</strong> 乘以 10 (例如：10 cm = 100 mm)</li>
+                    <li><strong>千米转米：</strong> 乘以 1000 (例如：1.5 km = 1500 m)</li>
+                    <li><strong>英寸转厘米：</strong> 乘以 2.54 (例如：1 英寸 ≈ 2.54 cm)</li>
+                    <li><strong>英尺转米：</strong> 乘以 0.3048 (例如：1 英尺 ≈ 0.3048 m)</li>
+                </ul>
+            </section>
+
+            <section id="applications">
+                <h2>不同领域的长度应用</h2>
+                <p>长度不仅是物理量，更是衡量世界尺度的核心工具。</p>
+                
+                <h3>1. 工程与建筑</h3>
+                <p>在建筑工程中，精确的长度测量至关重要。通常使用毫米作为最小单位，以确保结构稳定性。例如，钢筋的直径、混凝土的梁高都需要精确到毫米级别。</p>
+                
+                <h3>2. 科学研究</h3>
+                <p>在微观世界，长度的概念延伸到了纳米和埃米级别。例如，DNA双螺旋结构的直径约为 2 纳米，原子核的大小通常在飞米量级。</p>
+                
+                <h3>3. 日常生活</h3>
+                <p>在日常生活中，我们更多使用厘米和米。购买衣物时，胸围、衣长；装修时，墙面的周长和高度，都直接依赖于长度单位的精确读取。</p>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <aside class="sidebar">
+            <section>
+                <h2>在线计算器</h2>
+                <div class="converter-box">
+                    <div class="input-group">
+                        <label for="input-value">数值</label>
+                        <input type="number" id="input-value" placeholder="输入数字" oninput="calculateLength()">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="from-unit">从</label>
+                        <select id="from-unit" onchange="calculateLength()">
+                            <option value="m">米</option>
+                            <option value="cm">厘米</option>
+                            <option value="mm">毫米</option>
+                            <option value="km">千米</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="to-unit">到</label>
+                        <select id="to-unit" onchange="calculateLength()">
+                            <option value="cm">厘米</option>
+                            <option value="m">米</option>
+                            <option value="mm">毫米</option>
+                            <option value="km">千米</option>
+                        </select>
+                    </div>
+
+                    <div class="result-display" id="result">0.00</div>
+                    <p style="text-align:center; font-size:0.8rem; color:#999; margin-top:5px;">实时换算结果</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>常见单位简介</h2>
+                <p>除了公制单位，历史上还存在多种其他长度单位：</p>
+                <ul class="info-list">
+                    <li><strong>英里：</strong>主要用于英国和美国，1 英里 ≈ 1.609 公里。</li>
+                    <li><strong>光年：</strong>用于天文学，指光在真空中一年行进的距离（约 9.461 × 10^12 公里）。</li>
+                    <li><strong>埃：</strong>用于原子物理，1 埃 = 10^-10 米。</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>常见问题 (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        1. 为什么长度单位要用“米”？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        “米”作为基本单位，具有物理上的普适性。它基于光速这一恒定物理常数定义，避免了传统实物标准（如米尺）因磨损、温度变化而产生的误差，确保了全球测量的一致性。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        2. 如何快速记忆长度进率？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        国际公制长度单位采用十进制进率，即“满十进一”。记住“米”是核心，米到分米是十，分米到厘米是十，厘米到毫米也是十。这种逻辑简化了记忆负担。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        3. 1英寸等于多少厘米？
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        1 英寸 (in) 等于 2.54 厘米。这是国际通用的换算标准，常用于屏幕尺寸（如 27英寸显示器）和服装尺码的换算。
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 长度百科 - 国际标准单位换算与物理量测指南</p>
+        <p style="margin-top:10px; font-size:0.8rem;">本站提供基于国际单位制（SI）的长度单位换算与科普信息。</p>
+    </div>
+</footer>
+
+<script>
+    function calculateLength() {
+        const input = parseFloat(document.getElementById('input-value').value);
+        const fromUnit = document.getElementById('from-unit').value;
+        const toUnit = document.getElementById('to-unit').value;
+        const resultDisplay = document.getElementById('result');
+
+        if (isNaN(input)) {
+            resultDisplay.textContent = "0.00";
+            return;
+        }
+
+        // 定义基本单位为米 (m)
+        let valueInMeters = 0;
+
+        switch (fromUnit) {
+            case 'm': valueInMeters = input; break;
+            case 'cm': valueInMeters = input / 100; break;
+            case 'mm': valueInMeters = input / 1000; break;
+            case 'km': valueInMeters = input * 1000; break;
+        }
+
+        let finalResult = 0;
+
+        switch (toUnit) {
+            case 'm': finalResult = valueInMeters; break;
+            case 'cm': finalResult = valueInMeters * 100; break;
+            case 'mm': finalResult = valueInMeters * 1000; break;
+            case 'km': finalResult = valueInMeters / 1000; break;
+        }
+
+        // 格式化输出，保留2位小数
+        resultDisplay.textContent = finalResult.toFixed(2);
+    }
+
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+            const toggle = item.querySelector('.faq-toggle');
+            toggle.textContent = parent.classList.contains('active') ? '-' : '+';
+        });
+    });
+</script>
+
+</body>
+</html>
