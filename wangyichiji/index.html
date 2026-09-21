@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="网易吃鸡游戏攻略与资讯中心，提供绝地求生、荒野行动等热门吃鸡游戏的最新资讯、武器装备数据、实战技巧及游戏社区讨论。">
+    <meta name="keywords" content="网易吃鸡, 绝地求生, 荒野行动, 吃鸡攻略, 游戏资讯, 网易游戏">
+    <title>网易吃鸡-热门射击游戏攻略与资讯平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff5a5f;
+            --secondary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        .section-link {
+            color: var(--text-light);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/pubg/1600/900.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            background-color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #aaa;
+            margin: 0;
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .game-card-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .game-card-body {
+            padding: 20px;
+        }
+
+        .game-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .game-card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .game-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+        }
+
+        .tag.hot {
+            background-color: #fff0f0;
+            color: var(--primary-color);
+        }
+
+        /* Guide Section */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .guide-item {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            transition: box-shadow 0.2s;
+        }
+
+        .guide-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .guide-img {
+            width: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .guide-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .guide-category {
+            font-size: 12px;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .guide-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .guide-excerpt {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .guide-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            gap: 15px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ranking-list li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .ranking-num {
+            width: 24px;
+            height: 24px;
+            background: #eee;
+            color: #666;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            margin-right: 12px;
+            font-weight: 700;
+        }
+
+        .ranking-list li:nth-child(1) .ranking-num { background: #ffcc00; color: white; }
+        .ranking-list li:nth-child(2) .ranking-num { background: #e0b000; color: white; }
+        .ranking-list li:nth-child(3) .ranking-num { background: #c7a800; color: white; }
+
+        .ranking-name {
+            font-size: 14px;
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .ranking-arrow {
+            color: #ccc;
+        }
+
+        /* Weapons Section */
+        .weapons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .weapon-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .weapon-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .weapon-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .weapon-type {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .weapon-score {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+            .weapons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0 10px;
+            }
+            .nav-menu {
+                display: none; /* Simplified for single file demo */
+            }
+            .hero {
+                height: 400px;
+                text-align: center;
+                justify-content: center;
+            }
+            .hero-content {
+                padding: 0 20px;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .weapons-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>网易</span>吃鸡
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">游戏资讯</a>
+                <a href="#">武器图鉴</a>
+                <a href="#">战术攻略</a>
+                <a href="#">社区论坛</a>
+                <a href="#">下载专区</a>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">下载游戏</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="hero-tag">最新版本 v4.0</span>
+                <h1>绝地求生：刺激战场</h1>
+                <p>百人同屏，极限竞技。在缩小的安全区内，搜集物资，击败对手，成为最后的幸存者。即刻加入，体验最真实的吃鸡快感。</p>
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">立即开战</button>
+                    <button class="btn btn-outline" style="padding: 12px 30px; font-size: 16px; background: rgba(255,255,255,0.1); color: white; border-color: white;">观看视频</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>100万+</h3>
+                        <p>日活跃用户</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24小时</h3>
+                        <p>全天候匹配</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.9分</h3>
+                        <p>玩家评分</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Selection -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">热门游戏</h2>
+                    <a href="#" class="section-link">查看全部 &rarr;</a>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/pubg/400/300.jpg" alt="绝地求生：刺激战场" class="game-card-img">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">绝地求生：刺激战场</h3>
+                            <p class="game-card-desc">经典吃鸡玩法，还原度极高的战术竞技手游，支持百人同屏对战。</p>
+                            <div class="game-tags">
+                                <span class="tag hot">热门</span>
+                                <span class="tag">射击</span>
+                                <span class="tag">生存</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/nba/400/300.jpg" alt="荒野行动" class="game-card-img">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">荒野行动</h3>
+                            <p class="game-card-desc">网易旗舰级战术竞技手游，日活过亿，体验快节奏的战场对决。</p>
+                            <div class="game-tags">
+                                <span class="tag">热门</span>
+                                <span class="tag">战术</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/miit/400/300.jpg" alt="第五人格" class="game-card-img">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">第五人格</h3>
+                            <p class="game-card-desc">非对称对抗竞技手游，1v4的悬疑推理体验，独特的艺术风格。</p>
+                            <div class="game-tags">
+                                <span class="tag">推理</span>
+                                <span class="tag">对抗</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <img src="https://picsum.photos/seed/fgc/400/300.jpg" alt="永劫无间" class="game-card-img">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">永劫无间</h3>
+                            <p class="game-card-desc">武侠风格的大逃杀游戏，自由组合英雄技能，体验冷兵器格斗。</p>
+                            <div class="game-tags">
+                                <span class="tag">武侠</span>
+                                <span class="tag">动作</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide & News -->
+        <section class="section" style="background-color: #f1f2f6;">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-content-area">
+                        <div class="section-header" style="border-bottom: 1px solid #ddd;">
+                            <h2 class="section-title">最新攻略</h2>
+                            <a href="#" class="section-link">更多资讯 &rarr;</a>
+                        </div>
+                        <div class="guide-list">
+                            <article class="guide-item">
+                                <img src="https://picsum.photos/seed/gun1/200/200.jpg" alt="AWM枪械解析" class="guide-img">
+                                <div class="guide-content">
+                                    <div class="guide-category">武器图鉴</div>
+                                    <h3 class="guide-title">M24AWM伤害详解：为什么它是空投之王？</h3>
+                                    <p class="guide-excerpt">在绝地求生中，AWM以其惊人的爆头伤害著称。本文将详细解析AWM的弹道、配件搭配以及最佳射击距离...</p>
+                                    <div class="guide-meta">
+                                        <span>作者: 战术大师</span>
+                                        <span>2023-10-24</span>
+                                        <span>阅读: 12.5w</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="guide-item">
+                                <img src="https://picsum.photos/seed/gun2/200/200.jpg" alt="进圈技巧" class="guide-img">
+                                <div class="guide-content">
+                                    <div class="guide-category">实战技巧</div>
+                                    <h3 class="guide-title">落地成盒？教你三招从“落地成盒”到“吃鸡”</h3>
+                                    <p class="guide-excerpt">新手玩家最头疼的问题就是落地就死。本文分享几个关键的选点技巧和跑毒路线规划，助你稳健开局。</p>
+                                    <div class="guide-meta">
+                                        <span>作者: 吃鸡小能手</span>
+                                        <span>2023-10-22</span>
+                                        <span>阅读: 8.2w</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="guide-item">
+                                <img src="https://picsum.photos/seed/gun3/200/200.jpg" alt="车辆改装" class="guide-img">
+                                <div class="guide-content">
+                                    <div class="guide-category">载具攻略</div>
+                                    <h3 class="guide-title">载具改装指南：越野车改装优先级推荐</h3>
+                                    <p class="guide-excerpt">在复杂的山地地形中，一辆改装良好的载具能救你一命。本文详细对比了不同改装配件的效果。</p>
+                                    <div class="guide-meta">
+                                        <span>作者: 车神老王</span>
+                                        <span>2023-10-20</span>
+                                        <span>阅读: 5.1w</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">热门武器排行</h3>
+                            <ul class="ranking-list">
+                                <li>
+                                    <span class="ranking-num">1</span>
+                                    <span class="ranking-name">AWM狙击枪</span>
+                                    <span class="ranking-arrow">&rarr;</span>
+                                </li>
+                                <li>
+                                    <span class="ranking-num">2</span>
+                                    <span class="ranking-name">M416步枪</span>
+                                    <span class="ranking-arrow">&rarr;</span>
+                                </li>
+                                <li>
+                                    <span class="ranking-num">3</span>
+                                    <span class="ranking-name">Kar98k</span>
+                                    <span class="ranking-arrow">&rarr;</span>
+                                </li>
+                                <li>
+                                    <span class="ranking-num">4</span>
+                                    <span class="ranking-name">Vector冲锋枪</span>
+                                    <span class="ranking-arrow">&rarr;</span>
+                                </li>
+                                <li>
+                                    <span class="ranking-num">5</span>
+                                    <span class="ranking-name">S686霰弹枪</span>
+                                    <span class="ranking-arrow">&rarr;</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget" style="margin-top: 30px;">
+                            <h3 class="widget-title">热门视频</h3>
+                            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                                <img src="https://picsum.photos/seed/video1/100/60.jpg" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px;">
+                                <div style="font-size: 12px;">
+                                    <div style="font-weight: 700; margin-bottom: 4px;">SS7赛季精彩集锦</div>
+                                    <div style="color: #999;">播放: 203万</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <img src="https://picsum.photos/seed/video2/100/60.jpg" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px;">
+                                <div style="font-size: 12px;">
+                                    <div style="font-weight: 700; margin-bottom: 4px;">高手教你压枪技巧</div>
+                                    <div style="color: #999;">播放: 150万</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weapons Showcase -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">武器库</h2>
+                    <a href="#" class="section-link">查看全图鉴 &rarr;</a>
+                </div>
+                <div class="weapons-grid">
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🔫</div>
+                        <h4 class="weapon-name">M416</h4>
+                        <p class="weapon-type">突击步枪</p>
+                        <div class="weapon-score">综合评分 9.2</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🎯</div>
+                        <h4 class="weapon-name">AWM</h4>
+                        <p class="weapon-type">狙击枪</p>
+                        <div class="weapon-score">综合评分 9.8</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">💣</div>
+                        <h4 class="weapon-name">M24</h4>
+                        <p class="weapon-type">狙击枪</p>
+                        <div class="weapon-score">综合评分 9.0</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🔪</div>
+                        <h4 class="weapon-name">S12K</h4>
+                        <p class="weapon-type">霰弹枪</p>
+                        <div class="weapon-score">综合评分 8.5</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🪃</div>
+                        <h4 class="weapon-name">UZI</h4>
+                        <p class="weapon-type">冲锋枪</p>
+                        <div class="weapon-score">综合评分 8.0</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🧪</div>
+                        <h4 class="weapon-name">M249</h4>
+                        <p class="weapon-type">轻机枪</p>
+                        <div class="weapon-score">综合评分 8.8</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">⚡</div>
+                        <h4 class="weapon-name">Vector</h4>
+                        <p class="weapon-type">冲锋枪</p>
+                        <div class="weapon-score">综合评分 8.7</div>
+                    </div>
+                    <div class="weapon-card">
+                        <div class="weapon-icon">🚁</div>
+                        <h4 class="weapon-name">Ghillie</h4>
+                        <p class="weapon-type">防具</p>
+                        <div class="weapon-score">综合评分 9.5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: #f1f2f6;">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 8px;">
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            网易吃鸡游戏需要什么配置？
+                            <span style="transform: rotate(0deg); transition: transform 0.2s;">+</span>
+                        </summary>
+                        <p style="margin-top: 10px; color: #666; padding-right: 20px;">
+                            最低配置要求：Android 5.1.1及以上，4GB RAM。推荐配置：Android 8.0及以上，6GB RAM。iOS设备需iOS 10.0或更高版本。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            游戏内如何获取皮肤？
+                            <span style="transform: rotate(0deg); transition: transform 0.2s;">+</span>
+                        </summary>
+                        <p style="margin-top: 10px; color: #666; padding-right: 20px;">
+                            皮肤主要通过游戏内的“军需”系统抽取获得，也可以参与官方活动、登录奖励或商城购买限定皮肤。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            如何提高射击精度？
+                            <span style="transform: rotate(0deg); transition: transform 0.2s;">+</span>
+                        </summary>
+                        <p style="margin-top: 10px; color: #666; padding-right: 20px;">
+                            建议使用陀螺仪功能，练习压枪技巧，根据枪械特性调整灵敏度，并善用配件如垂直握把和枪口补偿器。
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>网易吃鸡</h2>
+                    <p>致力于为玩家提供最全面、最专业的游戏资讯与攻略服务。在这里，发现你的战场，成就你的传奇。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">新手教程</a></li>
+                        <li><a href="#">活动中心</a></li>
+                        <li><a href="#">客服中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>游戏分类</h3>
+                    <ul>
+                        <li><a href="#">射击竞技</a></li>
+                        <li><a href="#">战术策略</a></li>
+                        <li><a href="#">角色扮演</a></li>
+                        <li><a href="#">休闲竞技</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">玩家QQ群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 网易吃鸡攻略网 版权所有 | 本站内容仅供学习交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle FAQ accordion interaction
+        document.querySelectorAll('details').forEach(detail => {
+            detail.querySelector('summary').addEventListener('click', () => {
+                const icon = detail.querySelector('summary span');
+                if (detail.open) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+    </script>
+</body>
+                                      </html>
