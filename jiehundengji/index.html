@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结婚登记预约-全国民政局官方预约流程、材料与指南</title>
+    <meta name="description" content="提供全国结婚登记预约查询、流程指南、所需材料清单及注意事项。包含网上预约入口、常见问题解答及地方民政局联系方式，助您顺利办理结婚登记。">
+    <meta name="keywords" content="结婚登记预约,民政局预约,结婚证办理,结婚登记流程,婚姻登记预约">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-light: #ffcdd2;
+            --primary-dark: #b71c1c;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --bg-body: #f5f7fa;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #e57373 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Steps Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 32px 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 0 0 4px 4px;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0 auto 20px;
+        }
+
+        .step-card h3 {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Requirements Section */
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .req-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .req-item h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .req-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .req-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Info Cards (Tips) */
+        .tips-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .tip-card h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .tip-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .tip-list li::before {
+            content: '✓';
+            color: #2e7d32;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: #fafafa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #95a5a6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .tips-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+            </svg>
+            <span>婚事通</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#process">预约流程</a></li>
+                <li><a href="#requirements">所需材料</a></li>
+                <li><a href="#tips">注意事项</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>结婚登记预约</h1>
+            <p>全国婚姻登记系统入口 · 在线填写信息 · 查询办理进度</p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <a href="https://mca.gov.cn/" target="_blank" class="btn btn-primary">访问民政部官网</a>
+                <a href="#process" class="btn btn-outline" style="background: white; color: var(--primary-color);">查看办理指南</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>24h</strong>
+                    <span>系统服务时间</span>
+                </div>
+                <div class="stat-item">
+                    <strong>31</strong>
+                    <span>省/自治区</span>
+                </div>
+                <div class="stat-item">
+                    <strong>3000+</strong>
+                    <span>办理网点</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>全国结婚登记预约流程</h2>
+                <p>遵循“全国通办”政策，异地登记同样便捷</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>登录平台</h3>
+                    <p>访问“国家政务服务平台”或各省民政厅官网，进行实名注册与登录。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>选择事项</h3>
+                    <p>在服务专区中找到“结婚登记预约”或“涉外婚姻登记预约”入口。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>填写信息</h3>
+                    <p>双方填写证件信息、婚姻状况、预约日期及办理地点（支持省内跨区）。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>提交确认</h3>
+                    <p>核对信息无误后提交，系统生成预约成功凭证，按时前往办理。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="section" style="background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>办理所需材料清单</h2>
+                <p>男女双方需共同到场，带齐证件原件</p>
+            </div>
+            <div class="req-grid">
+                <div class="req-item">
+                    <h3>双方居民身份证</h3>
+                    <ul class="req-list">
+                        <li>需在有效期内，且照片有清晰指纹信息。</li>
+                        <li>如身份证丢失，需提供临时身份证。</li>
+                        <li>军人需提供军官证及部队出具的婚姻状况证明。</li>
+                    </ul>
+                </div>
+                <div class="req-item">
+                    <h3>双方户口簿</h3>
+                    <ul class="req-list">
+                        <li>需包含首页和本人页。</li>
+                        <li>婚姻状况需与身份证一致，如有变更需提供相关证明。</li>
+                        <li>集体户口需提供户口页原件及加盖公章的首页复印件。</li>
+                    </ul>
+                </div>
+                <div class="req-item">
+                    <h3>3张2寸双方合影证件照</h3>
+                    <ul class="req-list">
+                        <li>红底或蓝底均可，具体以当地民政局要求为准。</li>
+                        <li>建议现场拍摄，或提前在正规照相馆拍摄并注明“用于结婚登记”。</li>
+                        <li>照片不得翻拍，需符合国家证件照标准。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Tips Section -->
+    <section id="tips" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>预约与办理注意事项</h2>
+                <p>提前规划，避免因材料问题导致无法办理</p>
+            </div>
+            <div class="tips-wrapper">
+                <div class="tip-card">
+                    <h3>📅 预约时间规定</h3>
+                    <ul class="tip-list">
+                        <li>通常可提前1-30天进行预约，建议提前1-2周。</li>
+                        <li>法定节假日办理量较大，建议错峰预约。</li>
+                        <li>预约成功后如需取消，请至少提前1天操作。</li>
+                        <li>如未按时到场，系统会自动释放名额。</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>⚠️ 特殊情况说明</h3>
+                    <ul class="tip-list">
+                        <li><strong>补办结婚证：</strong>需提供离婚证或法院判决书。</li>
+                        <li><strong>再婚登记：</strong>需提供离婚证明文件。</li>
+                        <li><strong>军人/武警：</strong>需提供《军婚登记审查处理表》。</li>
+                        <li><strong>离异再婚：</strong>户口簿婚姻状况栏需已变更。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section" style="background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于结婚登记预约的疑问解答</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">外地户口可以在本地办理结婚登记吗？</div>
+                    <div class="faq-answer">可以。根据《国务院关于同意在辽宁省开展“证照分离”改革试点方案的批复》及各地实施方案，目前全国已基本实现婚姻登记“跨省通办”。双方均非本地户口的，可在一方经常居住地（如居住证所在地或工作地）申请办理。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">预约后如果不去了会怎样？</div>
+                    <div class="faq-answer">如果因故无法按时前往，请务必提前在预约系统中取消。未按时到场且未取消，会被系统记录为爽约，可能会影响您后续的预约权限（通常限制为1-3个月）。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">照片是必须自带还是现场拍？</div>
+                    <div class="faq-answer">大部分地区支持现场拍照，但为了节省时间，建议提前准备好符合要求的2寸合影证件照。部分民政局要求必须使用指定照相馆拍摄，请务必在预约时查看当地公告。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">双方不在一个城市，怎么预约？</div>
+                    <div class="faq-answer">可以选择一方户口所在地或居住证所在地的民政局进行预约。办理时，双方需同时到达该登记处现场，出示身份证和户口簿原件。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>婚事通指南</h4>
+                <ul>
+                    <li><a href="#">婚姻登记预约入口</a></li>
+                    <li><a href="#">全国民政局查询</a></li>
+                    <li><a href="#">领证吉日查询</a></li>
+                    <li><a href="#">结婚誓词大全</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>政策法规</h4>
+                <ul>
+                    <li><a href="#">民法典婚姻家庭编</a></li>
+                    <li><a href="#">婚姻登记工作规范</a></li>
+                    <li><a href="#">内地居民婚姻登记条例</a></li>
+                    <li><a href="#">涉外婚姻登记规定</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>咨询热线：12349（婚姻家庭咨询热线）</li>
+                    <li>监督电话：12345（政务服务便民热线）</li>
+                    <li>地址：全国婚姻登记信息中心</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 婚事通指南. 本站仅提供信息查询与流程指引，具体办理以当地民政局官方要求为准。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ Accordion Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
